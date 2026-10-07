@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soluciones Farmacéuticas · Catálogo</title>
+<link rel="icon" type="image/png" sizes="32x32" href="img/marca/favicon-32.png">
+<link rel="icon" type="image/png" sizes="180x180" href="img/marca/favicon-180.png">
+<link rel="apple-touch-icon" href="img/marca/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="logo">
+        <img src="img/marca/logo.png" class="logo-icon" alt="">
+        <span>Soluciones <em>Farmacéuticas</em></span>
+      </a>
+      <nav class="nav" id="primaryNav">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#categorias">Categorías</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú"
+              aria-expanded="false" aria-controls="primaryNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-glow"></div>
+      <div class="container hero-inner">
+        <p class="eyebrow">Catálogo digital</p>
+        <h1>Cuidamos tu salud con <span class="accent">calidad</span> y confianza</h1>
+        <p class="hero-text">
+          Explora nuestro catálogo de medicamentos, insumos médicos y
+          dermocosmética. Solo información — para compras o
+          dudas, contáctanos directamente.
+        </p>
+        <div class="hero-actions">
+          <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+          <a href="#contacto" class="btn btn-ghost">Contactar</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong id="statCount">0</strong><span>Productos</span></div>
+          <div><strong id="statCat">0</strong><span>Categorías</span></div>
+          <div><strong>100%</strong><span>Calidad garantizada</span></div>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 4v16M12 20l-6-6M12 20l6-6" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="categorias">
+      <div class="container">
+        <h2 class="section-title reveal">Explora por categoría</h2>
+        <p class="section-subtitle reveal">Filtra el catálogo o busca un producto por nombre</p>
+
+        <div class="controls reveal">
+          <div class="search-box">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3" stroke-linecap="round"/>
+            </svg>
+            <input type="text" id="searchInput" placeholder="Buscar producto...">
+          </div>
+          <div class="filters" id="filters"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="catalog-section" id="catalogo">
+      <div class="container">
+        <div class="grid" id="productGrid"></div>
+        <p class="empty-state" id="emptyState" hidden>No encontramos productos con ese criterio.</p>
+      </div>
+    </section>
+
+    <section class="cta-section" id="contacto">
+      <div class="container cta-inner reveal">
+        <h2>¿Tienes dudas sobre algún producto?</h2>
+        <p>Nuestro equipo de farmacéuticos está listo para asesorarte. Este catálogo es solo informativo.</p>
+        <div class="hero-actions">
+          <a href="https://wa.me/529515761034" class="btn btn-primary" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Soluciones Farmacéuticas. Catálogo informativo, sin venta en línea.</span>
+      <span class="footer-note">Consulta siempre a tu médico o farmacéutico antes de usar cualquier medicamento.</span>
+    </div>
+  </footer>
+
+  <div class="modal-backdrop" id="modalBackdrop" inert>
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalName">
+      <button class="modal-close" id="modalClose" aria-label="Cerrar">&times;</button>
+      <div class="modal-icon" id="modalIcon"></div>
+      <span class="badge" id="modalCategory"></span>
+      <h3 id="modalName"></h3>
+      <p class="modal-presentation" id="modalPresentation"></p>
+      <p id="modalDescription"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
